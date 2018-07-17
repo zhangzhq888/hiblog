@@ -3,6 +3,7 @@
 namespace Endpoints\Base;
 
 use Laravelladder\Core\Endpoints\BaseEndpoint;
+use Repositories\Base\BlogRepository;
 
 /**
  * Class Endpoint
@@ -12,4 +13,5 @@ use Laravelladder\Core\Endpoints\BaseEndpoint;
  * @package Endpoints\Base
  */
 abstract class Endpoint extends BaseEndpoint  {
+    use BlogRepository;
 }
