@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Models\Member\User;
-use Repositories\Blog\ArticleRepository;
 
 class CreateUserTable extends Migration
 {

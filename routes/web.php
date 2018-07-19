@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome',['version'=>Illuminate\Foundation\Application::VERSION]);
+//Route::get('/', function () {
+//    return view('welcome',['version'=>Illuminate\Foundation\Application::VERSION]);
+//});
+
+Route::get('/',function(){
+    return redirect('/article');
 });
+Route::resource('/article','Web\ArticleController',['only'=>['index','show']]);
