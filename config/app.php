@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'id'   => \Laravelladder\Core\Services\App::ID_VALUE_HI_BLOG,
+    'name' => env('APP_NAME', 'HiBlog'),
 
     /*
     |--------------------------------------------------------------------------
@@ -164,6 +165,7 @@ return [
         //Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         \Laravelladder\Core\ServiceProviders\ValidationServiceProvider::class,
+        \Laravelladder\Core\ServiceProviders\Log\LogServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -171,7 +173,8 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
+//        App\Providers\AppServiceProvider::class,
+        \Laravelladder\Core\ServiceProviders\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,

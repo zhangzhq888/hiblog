@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers\Web;
 
-use App\Http\Controllers\Controller;
 use Endpoints\Article\IndexArticle;
 use Endpoints\Article\ShowArticle;
 use Illuminate\Http\Request;
-//use Laravelladder\Core\Controllers\BaseController;
+use Laravelladder\Core\Controllers\BaseController;
 
-class ArticleController extends Controller {
+class ArticleController extends BaseController {
 
     public function index(Request $request){
         return IndexArticle::getInstance()

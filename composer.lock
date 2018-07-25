@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "fa446a7d129ef20ae05fcb3c7d2f6a89",
@@ -716,24 +716,24 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhangzhq888/laravel-ladder.git",
-                "reference": "7938803996b9fdacd4a816c7bab3d983b9475f27"
+                "reference": "6f4772d5eabccf7d35e64d8cc147a4318cf3791a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhangzhq888/laravel-ladder/zipball/7938803996b9fdacd4a816c7bab3d983b9475f27",
-                "reference": "7938803996b9fdacd4a816c7bab3d983b9475f27",
+                "url": "https://api.github.com/repos/zhangzhq888/laravel-ladder/zipball/6f4772d5eabccf7d35e64d8cc147a4318cf3791a",
+                "reference": "6f4772d5eabccf7d35e64d8cc147a4318cf3791a",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.2",
                 "illuminate/support": ">=5.0",
-                "php": ">=5.5.9",
+                "php": ">=7.0",
                 "predis/predis": "1.1.*"
             },
             "require-dev": {
                 "barryvdh/laravel-ide-helper": "2.4.*",
                 "jlapp/swaggervel": "dev-master",
-                "laravel/framework": "5.2.*",
+                "laravel/framework": "5.5.*",
                 "phpunit/phpunit": "~4.0",
                 "tymon/jwt-auth": "0.5.*"
             },
@@ -761,7 +761,7 @@
                 "source": "https://github.com/zhangzhq888/laravel-ladder/tree/master",
                 "issues": "https://github.com/zhangzhq888/laravel-ladder/issues"
             },
-            "time": "2018-07-16T15:37:27+00:00"
+            "time": "2018-07-25T16:14:10+00:00"
         },
         {
             "name": "laravel/framework",
