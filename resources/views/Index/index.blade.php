@@ -8,21 +8,21 @@
 <title>尼禄博客张海强的个人博客</title>
 <meta name="keywords" content="尼禄博客张海强的个人博客,PHP博客,技术博客">
 <meta name="description" content="尼禄博客张海强的个人博客,PHP博客,技术博客">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/nprogress.css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/style.css">
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/font-awesome.min.css">
-<link rel="apple-touch-icon-precomposed" href="__PUBLIC__/home/images/icon.png">
-<link rel="shortcut icon" href="__PUBLIC__/home/images/favicon.ico">
-<script src="__PUBLIC__/home/js/jquery-2.1.4.min.js"></script>
-<script src="__PUBLIC__/home/js/nprogress.js"></script>
-<script src="__PUBLIC__/home/js/jquery.lazyload.min.js"></script>
+<link rel="stylesheet" type="text/css" href="home/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="home/css/nprogress.css">
+<link rel="stylesheet" type="text/css" href="home/css/style.css">
+<link rel="stylesheet" type="text/css" href="home/css/font-awesome.min.css">
+<link rel="apple-touch-icon-precomposed" href="home/images/icon.png">
+<link rel="shortcut icon" href="home/images/favicon.ico">
+<script src="home/js/jquery-2.1.4.min.js"></script>
+<script src="home/js/nprogress.js"></script>
+<script src="home/js/jquery.lazyload.min.js"></script>
 
 <!--[if gte IE 9]>
-  <script src="__PUBLIC__/home/js/jquery-1.11.1.min.js" type="text/javascript"></script>
-  <script src="__PUBLIC__/home/js/html5shiv.min.js" type="text/javascript"></script>
-  <script src="__PUBLIC__/home/js/respond.min.js" type="text/javascript"></script>
-  <script src="__PUBLIC__/home/js/selectivizr-min.js" type="text/javascript"></script>
+  <script src="home/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="home/js/html5shiv.min.js" type="text/javascript"></script>
+  <script src="home/js/respond.min.js" type="text/javascript"></script>
+  <script src="home/js/selectivizr-min.js" type="text/javascript"></script>
 <![endif]-->
 <!--[if lt IE 9]>
   <script>window.location.href='upgrade-browser.html';</script>
@@ -44,7 +44,7 @@
 			 勤记录 懂分享</div>
   <div class="navbar-header">
 	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar" aria-expanded="false"> <span class="sr-only"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-	<h1 class="logo hvr-bounce-in"><a href="/" title="张海强的博客"><img src="__PUBLIC__/home/images/201610171329086541.png" alt="张海强的博客"></a></h1>
+	<h1 class="logo hvr-bounce-in"><a href="/" title="张海强的博客"><img src="home/images/201610171329086541.png" alt="张海强的博客"></a></h1>
   </div>
   <div class="collapse navbar-collapse" id="header-navbar">
 	<form class="navbar-form visible-xs" action="/Search" method="post">
@@ -80,15 +80,15 @@
 	<div class="carousel-inner" role="listbox">
 	  <div class="item active">
 	  <a href="http://tp.cn/home/index/tag?tag=8" target="_blank" title="Laravel框架应用篇" >
-	  <img src="__PUBLIC__/home/images//201610241227558789.jpg" alt="Laravel框架应用篇" class="img-responsive"></a>
+	  <img src="home/images//201610241227558789.jpg" alt="Laravel框架应用篇" class="img-responsive"></a>
 	  </div>
 	  <div class="item">
 	  <a href="http://tp.cn/home/index/tag?tag=23" target="_blank" title="PHP入门专题篇" >
-	  <img src="__PUBLIC__/home/images//201610181557196870.jpg" alt="PHP入门专题篇" class="img-responsive"></a>
+	  <img src="home/images//201610181557196870.jpg" alt="PHP入门专题篇" class="img-responsive"></a>
 	  </div>
 	  <div class="item">
 	  <a href="http://tp.cn/home/index/tag?tag=2" target="_blank" title="微信开发学习篇" >
-	  <img src="__PUBLIC__/home/images//582abf1f0072.jpg" alt="微信开发篇" class="img-responsive"></a>
+	  <img src="home/images//582abf1f0072.jpg" alt="微信开发篇" class="img-responsive"></a>
 	  </div>
 	</div>
 	<a class="left carousel-control" href="#focusslide" role="button" data-slide="prev" rel="nofollow"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">上一个</span> </a> <a class="right carousel-control" href="#focusslide" role="button" data-slide="next" rel="nofollow"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">下一个</span> </a> </div>
@@ -108,26 +108,26 @@
 		</div> -->
   </div>
   <!-- 文章列表 -->
-  <foreach name="data" item="v" >
-  <article class="excerpt excerpt-1" style="">
-  <a class="focus" href="/home/index/show?id={$v['a_id']}" target="_blank" ><img class="thumb" data-original="{$v['a_cover']}" style="display: inline;"></a>
-		<header><a class="cat" href="/home/index/show?id={$v['a_id']}"><?php echo $newcate[$v['a_cateid']]['cate_name'] ?><i></i></a>
-			<h2><a href="/home/index/show?id={$v['a_id']}" target="_blank" class="atitle">{$v['a_title']}</a>
-			</h2>
-		</header>
-		<p class="meta">
-			<time class="time"><i class="glyphicon glyphicon-time"></i> {:date('Y-m-d',$v['a_time'])}</time>
-			<span class="views"><i class="glyphicon glyphicon-eye-open"></i> {$v['a_count']}</span> <a class="comment" href="##comment" title="来源" target="_blank" ><i class="glyphicon glyphicon-comment"></i> 来源：<?php echo ($v['a_source']==1 ? '原创' : '转载')?> </a>
-		</p>
-		<p class="note">{:mb_substr(strip_tags($v['a_content']),1,350)}</p>
-	</article>
-	</foreach>
+	@foreach ($list as $article)
+	  <article class="excerpt excerpt-1" style="">
+	  <a class="focus" href="/home/index/show?id=" target="_blank" ><img class="thumb" data-original="{{$article->cover}}" style="display: inline;"></a>
+			<header><a class="cat" href="/home/index/show?id="><i></i></a>
+				<h2><a href="/home/index/show?id=" target="_blank" class="atitle">{{$article->title}}</a>
+				</h2>
+			</header>
+			<p class="meta">
+				<time class="time"><i class="glyphicon glyphicon-time"></i> </time>
+				<span class="views"><i class="glyphicon glyphicon-eye-open"></i> </span> <a class="comment" href="##comment" title="来源" target="_blank" ><i class="glyphicon glyphicon-comment"></i> 来源： </a>
+			</p>
+			<p class="note"></p>
+		</article>
+	@endforeach
   <nav class="pagination" style="display:block">
 	<ul>
-	  <foreach name="count" item="pp">
-	  <li <?php if($currentpage==$pp){echo 'class="active"';} ?>><a href="?page={$pp}">{$pp}</a></li>
-	  </foreach>
-	  <li><span>共 {:count($count)} 页</span></li>
+		@foreach ($counts as $count)
+	  <li @if($count == $page) class="active" @endif ><a href="?page={{$count}}" >{{$count}}</a></li>
+	    @endforeach
+	  <li><span>共 {{count($counts)}} 页</span></li>
 	</ul>
   </nav>
 </div>
@@ -159,24 +159,14 @@
 	<div class="widget-sentence-content">
 		<ul class="plinks ptags">
 			<foreach name="tagdata" item="tag">
-			<li><a href="/home/index/tag?tag={$tag['tag_id']}" title="{$tag['tag_name']}" draggable="false">{$tag['tag_name']} <span class="badge">{$tag['tag_count']}</span></a></li> 
+			<li><a href="/home/index/tag?tag=" title="" draggable="false"> <span class="badge"></span></a></li>
 			</foreach>                             
 		</ul>
 	</div>
   </div>
 
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"myblog2007"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
+
 <!-- 多说公共JS代码 end -->
 
 <!-- 淘宝广告区域 -->
@@ -226,8 +216,8 @@ var duoshuoQuery = {short_name:"myblog2007"};
 </div>
 <div id="gotop"><a class="gotop"></a></div>
 </footer>
-<script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
-<script src="__PUBLIC__/home/js/jquery.ias.js"></script>
-<script src="__PUBLIC__/home/js/scripts.js"></script>
+<script src="home/js/bootstrap.min.js"></script>
+<script src="home/js/jquery.ias.js"></script>
+<script src="home/js/scripts.js"></script>
 </body>
 </html>

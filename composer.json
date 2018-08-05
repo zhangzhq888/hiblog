@@ -29,7 +29,8 @@
             "Models\\": "app/Core/Models/",
             "Repositories\\": "app/Core/Repositories/",
             "Collections\\": "app/Core/Collections/",
-            "Endpoints\\": "app/Core/Endpoints/"
+            "Endpoints\\": "app/Core/Endpoints/",
+            "Controllers\\": "app/Http/Controllers"
         }
     },
     "repositories":{

@@ -15,7 +15,5 @@
 //    return view('welcome',['version'=>Illuminate\Foundation\Application::VERSION]);
 //});
 
-Route::get('/',function(){
-    return redirect('/article');
-});
+Route::get('/','Web\HomeController@index');
 Route::resource('/article','Web\ArticleController',['only'=>['index','show']]);
