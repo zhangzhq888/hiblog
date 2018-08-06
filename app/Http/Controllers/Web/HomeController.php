@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Web;
 
 
 use Endpoints\Article\IndexArticle;
+use Endpoints\Cate\IndexCate;
 use Illuminate\Http\Request;
 use Laravelladder\Core\Controllers\BaseController;
 
@@ -29,9 +30,9 @@ class HomeController extends BaseController
         return view(
             'index/index',
             [
-                'list'  =>$articles,
-                'counts' =>range(1,(int)$count),
-                'page'  => ($request->input(IndexArticle::ARGUMENT_PAGE) ? $request->input(IndexArticle::ARGUMENT_PAGE) : 1)
+                'list'   => $articles,
+                'counts' => range(1,(int)$count),
+                'page'   => ($request->input(IndexArticle::ARGUMENT_PAGE) ? $request->input(IndexArticle::ARGUMENT_PAGE) : 1)
             ]);
     }
 }

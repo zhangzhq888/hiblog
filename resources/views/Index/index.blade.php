@@ -111,13 +111,13 @@
 	@foreach ($list as $article)
 	  <article class="excerpt excerpt-1" style="">
 	  <a class="focus" href="/home/index/show?id=" target="_blank" ><img class="thumb" data-original="{{$article->cover}}" style="display: inline;"></a>
-			<header><a class="cat" href="/home/index/show?id="><i></i></a>
+			<header><a class="cat" href="/home/index/show?id="><i></i>{{$article->cate_name}}</a>
 				<h2><a href="/home/index/show?id=" target="_blank" class="atitle">{{$article->title}}</a>
 				</h2>
 			</header>
 			<p class="meta">
-				<time class="time"><i class="glyphicon glyphicon-time"></i> </time>
-				<span class="views"><i class="glyphicon glyphicon-eye-open"></i> </span> <a class="comment" href="##comment" title="来源" target="_blank" ><i class="glyphicon glyphicon-comment"></i> 来源： </a>
+				<time class="time"><i class="glyphicon glyphicon-time">333</i> </time>
+				<span class="views"><i class="glyphicon glyphicon-eye-open">444</i> </span> <a class="comment" href="##comment" title="来源" target="_blank" ><i class="glyphicon glyphicon-comment">77</i> 来源：555 </a>
 			</p>
 			<p class="note"></p>
 		</article>

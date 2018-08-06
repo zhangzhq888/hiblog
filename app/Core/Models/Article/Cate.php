@@ -28,7 +28,7 @@ class Cate extends EloquentModel
     protected $fillable = [
         self::DB_FIELD_ID,
         self::DB_FIELD_PID,
-        self::DB_FIELD_CATE_NAME,
+        self::DB_FIELD_NAME,
         self::DB_FIELD_CREATED_AT,
         self::DB_FIELD_UPDATED_AT,
         self::DB_FIELD_DELETED_AT,

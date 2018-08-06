@@ -35,13 +35,36 @@ class IndexArticle extends Endpoint
         $limit  = $this->argument(static::ARGUMENT_P_LIMIT);
         $offset = $limit * (($page > 0 ? $page : 1) - 1);
 
-        $f = [];
-        if($cateId) $f[] = [Article::DB_FIELD_CATE_ID,'=',$cateId];
-        if($tagId)  $f[] = [Article::DB_FIELD_TAGS,'LIKE',"%{$tagId}%"];
+
+        $sql = "SELECT
+                    :select_columns
+                FROM
+                    hi_article AS a
+                LEFT JOIN hi_cate AS cate ON a.cate_id = cate.id
+                WHERE
+                    a.deleted_at IS NULL";
+
+        if($cateId) $sql .= "AND a.cate_id = :cate_id ";
+        if($tagId)  $sql .= "AND a.tags like :tag_id ";
+
+        $sql .= " :order_by :pagination ";
 
         $list = $this
-            ->getBlogArticleRepo()
-            ->getListByFilters($f,$limit,$offset,['id'=>'desc']);
+            ->getUniRepo()
+            ->sqlSelectListWithPagination(
+                $sql,
+                [
+                    'cate_id' => $cateId,
+                    'tag_id'  => '%'.$tagId.'%',
+                ],
+                [
+                    'a.*',
+                    'cate.name as cate_name'
+                ],
+                $limit,
+                $offset,
+                ['a.id'=>'desc']
+                );
         return $list;
     }
 }
