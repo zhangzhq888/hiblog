@@ -116,10 +116,11 @@
 				</h2>
 			</header>
 			<p class="meta">
-				<time class="time"><i class="glyphicon glyphicon-time">333</i> </time>
-				<span class="views"><i class="glyphicon glyphicon-eye-open">444</i> </span> <a class="comment" href="##comment" title="来源" target="_blank" ><i class="glyphicon glyphicon-comment">77</i> 来源：555 </a>
+				<time class="time"><i class="glyphicon glyphicon-time"></i> {{$article->created_at}}</time>
+				<span class="views"><i class="glyphicon glyphicon-eye-open"></i> {{$article->count}}</span>
+                <a class="comment" href="##comment" title="来源" target="_blank" ><i class="glyphicon glyphicon-comment"></i> 来源:@if($article->source == 1) 原创 @else 转载 @endif</a>
 			</p>
-			<p class="note"></p>
+			<p class="note">{{mb_substr(strip_tags($article->content),1,250)}}</p>
 		</article>
 	@endforeach
   <nav class="pagination" style="display:block">
