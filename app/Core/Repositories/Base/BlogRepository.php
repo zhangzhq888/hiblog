@@ -21,4 +21,20 @@ trait BlogRepository
         return $this->_blogArticleRepo;
     }
 
+    /**
+     * @var \Repositories\Blog\ArticleRepository
+     */
+    protected $_blogTagRepo;
+
+    /**
+     * @return \Repositories\Blog\TagRepository
+     */
+    public function getBlogTagRepo()
+    {
+        if(!$this->_blogTagRepo){
+            $this->_blogTagRepo = \App::make('\Repositories\Blog\TagRepository');
+        }
+        return $this->_blogTagRepo;
+    }
+
 }

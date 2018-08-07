@@ -57,12 +57,12 @@
 
 	<ul class="nav navbar-nav navbar-left" style="margin-left:50px;">
 	  <li><a  title="首页" href="/">首页</a></li>
-	  <li><a  title="PHP应用" href="?cate_id=3">PHP应用</a></li>
-	  <li><a  title="微信开发" href="?cate_id=11">微信开发</a></li>
-	  <li><a  title="JavaScript" href="?cate_id=9">JavaScript</a></li>
-	  <li><a  title="PHP基础专题" href="?cate_id=2">PHP基础专题</a></li>
-	  <li><a  title="Linux系统" href="?cate_id=6">Linux系统</a></li>
-	  <li><a  title="Windows系统" href="?cate_id=5">Windows系统</a></li>
+	  <li><a  title="PHP应用" href="/home/index/cate?cate=3">PHP应用</a></li>
+	  <li><a  title="微信开发" href="/home/index/cate?cate=11">微信开发</a></li>
+	  <li><a  title="JavaScript" href="/home/index/cate?cate=9">JavaScript</a></li>
+	  <li><a  title="PHP基础专题" href="/home/index/cate?cate=2">PHP基础专题</a></li>
+	  <li><a  title="Linux系统" href="/home/index/cate?cate=6">Linux系统</a></li>
+	  <li><a  title="Windows系统" href="/home/index/cate?cate=5">Windows系统</a></li> 
 	</ul>
   </div>
 </div>
@@ -138,9 +138,9 @@
 <!-- 右侧联系方式 -->
 
   <div class="widget widget_search">
-	<form class="navbar-form" action="/search" method="get">
+	<form class="navbar-form" action="/home/index/search" method="get">
 	  <div class="input-group">
-		<input type="text" name="search" class="form-control" size="35" placeholder="请输入关键字" maxlength="15" autocomplete="off">
+		<input type="text" name="keywords" class="form-control" size="35" placeholder="请输入关键字" maxlength="15" autocomplete="off">
 		<span class="input-group-btn">
 		<button class="btn btn-default btn-search" type="submit">搜索</button>
 		</span> </div>
@@ -152,15 +152,6 @@
 <div style="padding:5px 0 0 20px">
 <!-- 多说最新评论 start -->
 	<div class="ds-recent-comments" data-num-items="20" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
-	<!--PC和WAP自适应版-->
-	<div id="SOHUCS" sid="请将此处替换为配置SourceID的语句" ></div>
-	<script type="text/javascript">
-        (function(){
-            var appid = 'cyqS4lKzB';
-            var conf = 'prod_13384ffc9d8bdb21c53c6f72d46f7866';
-            var width = window.innerWidth || document.documentElement.clientWidth;
-            if (width < 960) {
-                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
 <!-- 多说最新评论 end -->
 </div>
 </div>
@@ -168,9 +159,9 @@
 	<h3>标签云</h3>
 	<div class="widget-sentence-content">
 		<ul class="plinks ptags">
-			@foreach($tags as $key=>$tag)
-			<li><a href="?tag_id=" title="" draggable="false">{{$tag->name}} <span class="badge">{{$tag->count}}</span></a></li>
-			@endforeach
+			<foreach name="tagdata" item="tag">
+			<li><a href="/home/index/tag?tag=" title="" draggable="false"> <span class="badge"></span></a></li>
+			</foreach>                             
 		</ul>
 	</div>
   </div>

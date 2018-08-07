@@ -26,7 +26,7 @@ class Tags extends EloquentModel
      */
     protected $fillable = [
         self::DB_FIELD_ID,
-        self::TABLE_NAME,
+        self::DB_FIELD_NAME,
         self::DB_FIELD_COUNT,
         self::DB_FIELD_CREATED_AT,
         self::DB_FIELD_UPDATED_AT,
