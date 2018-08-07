@@ -10,6 +10,7 @@ namespace App\Http\Controllers\Web;
 
 
 use Endpoints\Article\IndexArticle;
+use Endpoints\Article\ShowArticle;
 use Endpoints\Tag\IndexTag;
 use Illuminate\Http\Request;
 use Laravelladder\Core\Controllers\BaseController;
@@ -37,6 +38,20 @@ class HomeController extends BaseController
                 'counts' => range(1,(int)$count),
                 'page'   => ($request->input(IndexArticle::ARGUMENT_PAGE) ? $request->input(IndexArticle::ARGUMENT_PAGE) : 1)
             ]);
+    }
+
+    public function show(Request $request,$id){
+        $article = ShowArticle::getInstance()
+            ->setArguments([
+                ShowArticle::ARGUMENT_ID => $id
+            ])
+            ->dryRun();
+        return view(
+            'index/show',
+            [
+                'article' => $article
+            ]
+        );
     }
 
 }
