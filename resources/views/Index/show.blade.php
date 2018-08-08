@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="/home/css/font-awesome.min.css">
     <link rel="apple-touch-icon-precomposed" href="/home/images/icon.png">
     <link rel="shortcut icon" href="/home/images/favicon.ico">
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/article_show.js"></script>
     <script src="/ueditor/ueditor.parse.js"></script>
     <script src="/home/js/jquery-2.1.4.min.js"></script>
     <script src="/home/js/nprogress.js"></script>
@@ -33,7 +35,9 @@
     <script>window.location.href = 'upgrade-browser.html';</script>
     <![endif]-->
 </head>
-<body class="user-select single">
+<body class="user-select single" ng-app="myApp">
+<div ng-controller="article">
+
 <header class="header">
     <nav class="navbar navbar-default" id="navbar">
         <div class="container">
@@ -93,7 +97,7 @@
                             data-original-title="分类："><i class="glyphicon glyphicon-list"></i> <a href="#" title=""></a></span>
                     <span class="item article-meta-views" data-toggle="tooltip" data-placement="bottom" title=""
                           data-original-title="浏览量：{{$article->count}}"><i
-                                class="glyphicon glyphicon-eye-open"></i> {{$article->count}}</span>
+                                class="glyphicon glyphicon-eye-open"></i> @{{content.id}}</span>
                     <!-- <span class="item article-meta-comment" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="评论量"><i class="glyphicon glyphicon-comment"></i> 4</span> -->
                 </div>
             </header>
@@ -235,6 +239,7 @@
     </div>
     <div id="gotop"><a class="gotop"></a></div>
 </footer>
+</div>
 <script src="/home/js/bootstrap.min.js"></script>
 <script src="/home/js/jquery.ias.js"></script>
 <script src="/home/js/scripts.js"></script>
