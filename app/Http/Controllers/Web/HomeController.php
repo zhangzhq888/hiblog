@@ -54,4 +54,36 @@ class HomeController extends BaseController
         );
     }
 
+    public function test($array = [1,3,5,4,2]){
+        echo '原数组'.json_encode($array).'</br>';
+        self::bubbleSort($array);
+    }
+
+    public function bubbleSort($arr){
+        $length = count($arr);
+        $counter = 1;
+        for($i=0;$i<$length;$i++){
+            //echo $i.'--'.$length.'<br>';
+            for($j=1;$j<$length;$j++){
+                echo '第'.$counter++.'次比较：'.$arr[$j].'和'.$arr[$j-1];
+                if($arr[$j] < $arr[$j-1]){
+                    list($arr[$j],$arr[$j-1]) = self::swap($arr[$j],$arr[$j-1]);
+                    echo "--互换";
+                }
+                echo '--比较后：'.json_encode($arr)."</br>";
+            }
+            echo '---------该组结束----------</br>';
+            $length --;
+        }
+        echo  '排序后'.json_encode($arr).'</br>';
+    }
+
+    public function swap($a,$b)
+    {
+        $a = $a ^ $b;
+        $b = $a ^ $b;
+        $a = $a ^ $b;
+        return [$a,$b];
+    }
+
 }

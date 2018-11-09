@@ -17,4 +17,5 @@
 
 Route::get('/','Web\HomeController@index');
 Route::get('/article','Web\HomeController@index');
+Route::get('/test','Web\HomeController@test');
 Route::resource('/article','Web\HomeController',['only'=>['show']]);

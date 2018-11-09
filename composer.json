@@ -10,7 +10,8 @@
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "laravel-ladder/core":"@dev",
-        "barryvdh/laravel-ide-helper": "2.4.*"
+        "barryvdh/laravel-ide-helper": "2.4.*",
+        "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
